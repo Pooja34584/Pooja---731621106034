@@ -1,19 +1,40 @@
-<html>
+html>
     <head>
-        <title>Login Page</title>
+        <title>loginpage</title>
     </head>
     <body>
         <br><br>
-        <table width="40%" align="center">
-            <tr><th colspan="2">Registration Page</th></tr>
-            <tr><td>First Name</td><td><input type="text"/></td></tr>
-            <tr><td>Last Name</td><td><input type="text"/></td></tr>
-            <tr><td>Email</td><td><input type="email"/></td></tr>
-            <tr><td>D.O.B</td><td><input type="Date"/></td></tr>
-            <tr><td>Mobile.No</td><td><input type="Number"/></td></tr>
-            <tr><td>UserName</td><td><input type="Name"/></td></tr>
-            <tr><td>Password</td><td><input type="Number Letters"/></td></tr>
-            <tr><td>Gender</td></tr>
-        </table>
-    </body>
-</html>
+        <table border="1" width = "100%" align = "center">
+            <tr><th colspan ="2">Registration</th></tr>
+            <tr><td>FirstName</td><td><input type = "text"/></td></tr>
+            <tr><td>LastName</td><td><input type = "text"/></td></tr>
+            <tr><td>MobileNo</td><td><input type = "number"/></td></tr>
+            <tr><td>Email</td><td><input type = "email"/></td></tr>
+            <tr><td>DOB</td><td><input type = "date"/></td></tr>
+            <tr><td>Username</td><td><input type = "text"/></td></tr>
+            <tr><td>Password</td><td><input type = "password"/></td></tr>
+            <tr><td>Gender</td><td>
+            <input type = "radio" name ="gender"/>Male
+            <input type = "radio" name ="gender"/>Female
+            </td></tr>
+            <tr><td>Skills</td><td>
+            <input type = "checkbox" /> Java
+            <input type = "checkbox" /> C++
+            <input type = "checkbox" /> Python
+            </td></tr>
+            <tr><td>City</td><td>
+            <select>
+                <option>Salem</option>
+                <option>Erode</option>
+                <option>Nammakkal</option>
+            </select>
+            </td></tr>
+            <tr><td>Address</td><td>
+                <textarea rows ="5" cols ="25"></textarea>
+            </td></tr>
+                <td colspan="3" align="center">
+                <button type="submit">Register</button>
+            </td>
+            </table>
+            </body>
+        </html>
