@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>factorial</title>
+        <script>
+            function Factorial(){
+                let n1=parseInt(document.getElementById("n1").value);
+                let i;
+                fact=1;
+               
+                    for(i=1;i<=n1;i++)
+                     fact=fact*i;
+                    
+                document.getElementById("ResultDiv").innerHTML="Factorial " + fact;
+
+                }
+        </script>
+    </head>
+    <body>
+         Enter a Number<input type="text" id="n1"/>
+         <br>
+         <button onclick="Factorial()">Factorial</button>
+         <div id="ResultDiv"></div>
+    </body>
+</html>

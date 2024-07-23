@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Pattern</title>
+        <script>
+            function Pattern(){
+
+                let n=parseInt(document.getElementById("n").value);
+                let result="";
+                
+                for(let i=0;i<=n;i++){
+                    for(let j=1;j<=i;j++){
+                        result +='*';
+                    }
+                    result +="<br>";
+                }
+                        document.getElementById("ResultDiv").innerHTML="Pattern is"+result;
+
+                }
+
+        </script>
+    </head>
+    <body>
+        Enter a Number<input type="text" id="n"/>
+        <br>
+        <button onclick="Pattern()">Pattern</button> 
+        <div id="ResultDiv"></div>
+
+    </body>
+</html>
