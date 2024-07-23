@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>String Length</title>
+    <title>String Operations</title>
     <script>
         function myFunction() {
-            var str= "TamilSelvi";
-            var str1="hello"; 
-            var a=str.length;
-            var b=str.charAt(1);
-            var c=str.slice(2,5);
-            var d=str.substring(2);
-            var e=str.substr(2,5);
-            var f=str.toUpperCase();
-            var g=str.toLowerCase();
-            var h=str.concat(str1);
-            var i=str.trim();
-            var j=str.trimStart();
-            var k=str.repeat(2);
-            var l=str.replace("TamilSelvi","hello");
-            var m=str.replaceAll("TamilSelvi","helloall");
-            var n=str.split("r"); 
-
-
-            var b1=a +"<br>"+b+"<br>"+c+"<br>"+d+"<br>"+e+"<br>"+f+"<br>"+g+"<br>"+h+"<br>"+i+"<br>"+j+"<br>"+k+"<br>"+l+"<br>"+m+"<br>"+n;
+            var str = document.getElementById("str").value;
+            var str1 = document.getElementById("str1").value;
+            var a = str.length;
+            var b = str.charAt(1);
+            var c = str.slice(2, 5);
+            var d = str.substring(2);
+            var e = str.substr(2, 5);
+            var f = str.toUpperCase();
+            var g = str.toLowerCase();
+            var h = str.concat(str1);
+            var i = str.trim();
+            var j = str.trimStart();
+            var k = str.repeat(2);
+            var l = str.replace("str", "hello");
+            var m = str.replaceAll("str", "helloall");
+            var n = str.split("r");
+            var b1 = "Length: " + a + "<br>" +
+                     "Character at index 1: " + b + "<br>" +
+                     "Slice from index 2 to 5: " + c + "<br>" +
+                     "Substring from index 2: " + d + "<br>" +
+                     "Substring from index 2, length 5: " + e + "<br>" +
+                     "Uppercase: " + f + "<br>" +
+                     "Lowercase: " + g + "<br>" +
+                     "Concatenation with second string: " + h + "<br>" +
+                     "Trimmed: " + i + "<br>" +
+                     "Trimmed from start: " + j + "<br>" +
+                     "Repeated twice: " + k + "<br>" +
+                     "Replace 'string' with 'hello': " + l + "<br>" +
+                     "Replace all 'string' with 'helloall': " + m + "<br>" +
+                     "Split by 'r': " + n.join(", ");
             document.getElementById("result").innerHTML = b1;
-            
         }
-         </script> 
-         </head>  
-         <body>
-            Strings<input type="text" id="str"><br><br>
-            <button onclick="myFunction()">String</button><br><br>
-            <div id="result"></div>
-        </body>
-
+    </script>
+</head>
+<body>
+    <h2>Enter Strings:</h2>
+    <input type="text" id="str" placeholder="Enter string...">
+    <input type="text" id="str1" placeholder="Enter second string...">
+    <button onclick="myFunction()">Perform String Operations</button>
+    <div id="result"></div>
+</body>
 </html>
