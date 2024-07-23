@@ -7,34 +7,34 @@
             var str = document.getElementById("str").value;
             var str1 = document.getElementById("str1").value;
             var a = str.length;
-            var b = str.charAt(1);
-            var c = str.slice(2, 5);
+            alert(a);
+            var b = str.charAt(1); 
+            alert(b);
+            var c = str1.slice(2, 5);
+            alert(c);
             var d = str.substring(2);
-            var e = str.substr(2, 5);
+            alert(d);
+            var e = str1.substr(2, 5);
+            alert(e);
             var f = str.toUpperCase();
-            var g = str.toLowerCase();
+            alert(f);
+            var g = str1.toLowerCase();
+            alert(g)
             var h = str.concat(str1);
-            var i = str.trim();
+            alert(h)
+            var i = str1.trim();
+            alert(i)
             var j = str.trimStart();
-            var k = str.repeat(2);
+            alert(j)
+            var k = str1.repeat(2);
+            alert(k)
             var l = str.replace("str", "hello");
-            var m = str.replaceAll("str", "helloall");
+            alert(l)
+            var m = str1.replaceAll("str", "helloall");
+            alert(m)
             var n = str.split("r");
-            var b1 = "Length: " + a + "<br>" +
-                     "Character at index 1: " + b + "<br>" +
-                     "Slice from index 2 to 5: " + c + "<br>" +
-                     "Substring from index 2: " + d + "<br>" +
-                     "Substring from index 2, length 5: " + e + "<br>" +
-                     "Uppercase: " + f + "<br>" +
-                     "Lowercase: " + g + "<br>" +
-                     "Concatenation with second string: " + h + "<br>" +
-                     "Trimmed: " + i + "<br>" +
-                     "Trimmed from start: " + j + "<br>" +
-                     "Repeated twice: " + k + "<br>" +
-                     "Replace 'string' with 'hello': " + l + "<br>" +
-                     "Replace all 'string' with 'helloall': " + m + "<br>" +
-                     "Split by 'r': " + n.join(", ");
-            document.getElementById("result").innerHTML = b1;
+            alert(n)
+           
         }
     </script>
 </head>
