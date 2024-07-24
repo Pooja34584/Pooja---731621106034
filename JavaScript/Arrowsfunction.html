@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            const sum=()=>(10+20);
+            document.write("<br>addition:" +sum());
+            const sub=(x,y)=>x-y;
+            document.write("<br>Subtraction:"+ sub(80,20))
+            const mul=(x,y)=>x*y;
+            document.write("<br>Multiplication:"+ mul(20,20));
+            const big=(a,b)=>{
+                if(a>b)
+                  return a;
+                else
+                  return b;
+            };
+            document.write("<br>Biggest Number:"+ big(20,80))
+        const number=(n)=>{
+            let i;
+            fact=1;
+                for(i=2;i<=n;i++){
+                    fact=fact*i;
+                }
+                return fact;
+        };
+        document.write("<br>Factorial:"+ number(5));
+       </script>
+<div id="output"></div>
+    </body>
+</html>

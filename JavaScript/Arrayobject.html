@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Object</title>
+        <script>
+            function myfunction(){
+             let skills= new Array("C","C++","JAVA","PYTHON");
+             document.write("Array Elements :" +skills);
+             document.write("<br>Total no of Elements :" +skills.length);
+             document.write("<br>Last Element:" +skills[skills.length-1])
+             skills.push(".Net");
+             document.write("<br>Array Elements:" +skills);
+             skills.pop();
+             document.write("<br>Array Elements:" + skills);
+             document.write("<br>Array Elements:");
+             for(let i=0;i<skills.length;i++){
+                document.write("<br>"+skills[i])
+             }
+            }
+        </script>
+    </head>
+    <body onload="myfunction()">
+
+    </body>
+</html>
