@@ -1,7 +1,21 @@
-<html>
-<body>
-<h1>JavaScript HTML Events</h1>
-<h2>The onmouseover and onmouseout Attributes</h2>
-<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over this text</h1>
-</body>
-</html>
+<html>  
+<head> Javascript Events </head>  
+<body>  
+<script language="Javascript" type="text/Javascript">  
+    
+    function clickevent()  
+    {  
+        document.write("This is JavaScript");  
+    }  
+    
+	function mouseoverevent()
+	{
+		alert("This is JavaScript");
+    } 
+    
+</script>  
+<body onload="alert('Page successfully loaded');"> 
+<input type="button" onclick="clickevent()" value="Who's this?"/> 
+<input type="button" onmouseover="mouseoverevent()"> Keep cursor over me</p>
+</body>  
+</html>  
