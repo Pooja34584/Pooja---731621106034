@@ -1,109 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="D:\fullstack\BootStrap\download (1).png" type="icon type">
+   <title>Shop for Men,Women</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <style>
+        .n1{
+            background-color:#d10d48;
+            color:white;
+            padding:2px;
+        }
+        li,h4,ul{
+            display:inline;
+        }
+        ul{
+            margin-left:35%;
+        }
+        .Div1{
+            background-color:#e40046;
+            display: inline;
+            color: white;
+        }
+        .Searchbar{
+                display:inline;
+                margin-left: 10%;
+                width:30%;
+                margin-top: 10%;
+        }
+        h2{
+            display: inline;
+            margin-left:70px;
+        }
+        .s{
+            background-color:#e40046;
+            color:white;
+            padding:10px;
+            margin-left:0px;
+        }
+        .products{
+            padding-bottom:25%;
+            width:15%;
+            background-color:lightgray;
+            color:black;
+        }
+        .products li:hover{
+          background-color:royalblue;
+          color:white;
+        }
+        h3{
+            display: inline;
+            margin-left:60%;
+        }
+        .p{
+               background-color: white;
+               width: 500px;
+               height: 35px;
+               border:#e40046
+        }
+        .button{
+            background-color:#e40046;
+            color:White;
+            border:2px solid #e40046;
+            display: inline;
+        }
+        .C{
+             display: inline;
+             padding-left: 15%;
+        }
+        .S{
+            display: inline;
+             padding-left: 5%;
+        }
+        .l{
+            word-spacing: 10px;
+        }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-
-/* Style the header */
-.header {
-    padding: 2px;
- background: maroon;
-  color: white;
-}
-.one{
-    
-    background-color: red;
-    color: white;
-
-}
-  .one{
-    padding: 1px;
-    font-size:12px;
-    
-  }
-  .vertical {
-    width: 200px;
-  }
-  .vertical a {
-    background-color: #eee;
-    color: black;
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-  }
-  
-  .vertical a:hover {
-    background-color: #ccc;
-  }
-  
-  .vertical a.active {
-    background-color:blueviolet;
-    color: white;
-  }
-  .right{
-    color: white;
-    position: absolute;
-     top: 8px;
-     right: 16px;
-    font-size: 15px;
-    word-spacing:15px;
- }
- .btn{
-    padding: 10px;
-    width: 50px;
-    height: 10px;
- }
-
-</style>
+    </style>
 </head>
 <body>
-
-<div class="header">
-  <p>Brand Waali Quality, Bazaar Waali Deal!</p>
-<div class="right">Impact@Snapdeal  HelpCenter  DownloadApp DonateForElder
-</div>   
+    <nav class="n1">
+        <h4>Brandwaali Quality,Bazaar Waali Deal!</h4>
+        <ul class="l">
+            <li>Impact@Snapdeal  </li>
+            <li>HelpCenter  </li>
+            <li>SellOn Snapdeal  </li>
+            <li>DownloadApp  </li>
+            <li>DonateForElderly  </li>
+        </ul>
+    </nav>
+    <div class="s">
+        <h2>Snapdeal</h2>
+    <div class="Searchbar">
+        <input class="p" type="text" placeholder="Search products & brands">
+        <button style="height: 35px;width: 90px;cursor:pointer;background-color: rgb(12, 12, 12);color:white;">Search</button>
+        <div class="C">
+            Cart <span class="glyphicon glyphicon-shopping-cart"></span> 
+            <div class="S">
+                  SignIn <span class="glyphicon glyphicon-user"></span>
+                  </div>
+                </div>
+            </div>
 </div>
-<div class="one">
-    <h5>Snapdeal</h5> 
-    <i class='fas fa-cart-plus' style='font-size:24px'></i>
-    <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search Products & brands" name="search">
-          <button class="btn" type="button"><i class="fa fa-search"></i></button>Search
-        </form>
-      </div>
-</div>
-<div class="vertical">
-    <a href="#" class="active">Top Categories</a>
-    <a href="#">Men's Fashion</a>
-    <a href="#">Women's Fashion</a>
-    <a href="#">Home & Kitchen</a>
-    <a href="#">Toys & Kid's Fashion</a>
-    <a href="#">Beauty,Health&Daliy Nutrition</a>
-    <a href="#" class="active">More Categories</a>
-    <a href="#">Automotives</a>
-    <a href="#">Mobile&Accessories</a>
-    <a href="#">Electronics</a>
-    <a href="#">Sports,Fitness&Outdoor</a>
-    <a href="#">Computer & Gaming</a>
-    <a href="#">Books,Media & Music</a>
-    <a href="#">Hobbies</a>
-    <a href="#">Household Essential</a>
-    <a href="#">Online Education</a>
-    <a href="#" class="active">TRENDING SEARCHES</a>
-    <a href="#">Kitchen Products</a>
-    <a href="#">Shoes for Men</a>
-    <a href="#">Kurti Set</a>
-    <a href="#">Sandal Men</a>
-    <a href="#">Sport Shoe Men</a>
-    <a href="#">Computer & Gaming</a>
-    <a href="#">Travel</a>
-    <a href="#">Two Wheelers</a>
-</div>
-
+<div class="products">
+    <h4>TOP CATEGORIES</h4><br>
+    <br>
+    <ul>
+    <center>
+    <li>Men's Wear Collections</li><br>
+    <br>
+    <li >Women's Wear</li><br>
+    <br>
+    <li>Home & Kitchen</li><br>
+    <br>
+    <li>Toys,Kids Fashion</li><br><br>
+    <li>Beauty,Health & Daily Products</li><br><br>
+    <h4>MORE CATEGORIES</h4><br><br>
+    <li>AutoMotives</li><br>
+    <li>Moblie & Accessories</li><br><br>
+    <li>Electronics</li><br><br>
+    <li>Sports,Fitness & Outdoor</li><br><br>
+    <li>Computers & Games</li><br><br>
+    <li>Books,Media & Music</li><br><br>
+    <li>Hobbies</li><br><br>
+    <h4>TRENDING SEARCHES</h4>
+    <li></li>
+</center>
+    </ul>
+    </div>
+    <div class="scroll-conatiner">
+      
+    </div>
 </body>
 </html>
