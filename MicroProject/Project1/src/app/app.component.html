@@ -1,81 +1,122 @@
-<div class="head"><b>STAFF MANAGEMENT SYSTEM</b></div>
-       <div class="right"><br><br>
-        <br>
-         <table border="2" class="h">
-            <tr><th colspan="9">LIST OF A STAFF</th></tr>
-            <tr>
-                <th rowspan="9">DETAILS</th>
-                <th>Id.No</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Phone No</th>
-                <th>Address</th>
-                <th>Subject handling</th>
-                <th>Salary</th>
-                <th>Department</th>
-            </tr>
-            <tr>
-                <td>601</td>
-                <td>Thenmozhli</td>
-                <td>30</td>
-                <td>7786172341</td>
-                <td>11,left street,chennai.</td>
-                <td>Mathametaics</td>
-                <td>Rs.25000</td>
-                <td>MECh-Iyr</td>
-            </tr>
-            <tr>
-                <td>604</td>
-                <td>Kumaresh</td>
-                <td>25</td>
-                <td>8143567435</td>
-                <td>11,right street,Namakkal.</td>
-                <td>Chemistry</td>
-                <td>Rs.30000</td>
-                <td>ECE-IIIyr</td>
-            </tr>
-            <tr>
-                <td>634</td>
-                <td>Amala</td>
-                <td>23</td>
-                <td>7708610187</td>
-                <td>34,thillaipuram street,Namakkal</td>
-                <td>Tamil</td>
-                <td>Rs.40000</td>
-                <td>ECE-IIyr</td>
-            </tr>
-        
-         </table>
-       </div>
-       <div class="left"><br>
-        Id.No: <br>
-          <input type="text"  size="25px"/>
-        <br>
-        Name: <br>
-            <input type="text" size="25px"/>
-          <br>
-          Age: <br>
-            <input type="text" size="25px"/>
-          <br>
-         Phone.No: <br>
-            <input type="text" size="25px"/>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <h1>Staff Management System</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                             <form #myForm="ngForm">
+                                <div class="form-group">
+                                    <label for="Staff Id">
+                                        Staff Id
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="id" 
+                                           #id="ngModel" ngModel
+                                           required
+                                           pattern="[0-9]+"
+
+                                           
+                                            />
+                                </div>
+                                <div *ngIf="id.touched">
+                                  <div *ngIf="id.errors?.['required']">
+                                    <b style="color: red;">Staff Id is not Required.</b>
+
+                                  </div>
+                                  <div *ngIf="id.errors?.['pattern']">
+                                    <b color="red"><b>Invalid Staff Id.</b></b>
+                                  </div>
+                                </div>
+
+
+
+
+                                <div class="form-group">
+                                    <label for="Staff Name">
+                                        Staff Name
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="stafName" 
+                                           #stafName="ngModel" ngModel
+                                           required
+                                           pattern="[A-Z,a-z]+"
+                                            />
+                                </div>
+
+                                <div *ngIf="stafName.touched">
+                                  <div *ngIf="stafName.errors?.['required']">
+                                    <b style="color: red;">Staff Name is not Required.</b>
+
+                                  </div>
+                                  <div *ngIf="stafName.errors?.['pattern']">
+                                    <b color="red"><b>Invalid Staff Name.</b></b>
+                                  </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="Staff Salary">
+                                        Staff Salary
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="stafSalary" 
+                                           #stafSalary="ngModel" ngModel
+                                           required
+                                           pattern="[0-9]+"
+                                           />
+                                </div>
+                                          
+                                <div *ngIf="stafSalary.touched">
+                                  <div *ngIf="stafSalary.errors?.['required']">
+                                    <b style="color: red;">Staff Salary is not Required.</b>
+
+                                  </div>
+                                  <div *ngIf="stafSalary.errors?.['pattern']">
+                                    <b color="red"><b>Invalid Staff Salary.</b></b>
+                                  </div>
+                                </div>
+
+
+                                <button class="btn btn-success"(click)="insertStaff(myForm.value)">
+                                    Insert 
+                                </button>&nbsp;
+                            
+                                <button class="btn btn-primary"(click)="updateStaff(myForm.value)">
+                                    Update 
+                                </button>&nbsp;
+                                <button class="btn btn-danger" (click)="deleteStaff(myForm.value)">
+                                    Delete 
+                                </button>
+                                &nbsp;
+                          
+                                <button class="btn btn-warning" (click)="findStaff(myForm.value)">
+                                    Find 
+                                </button>
+                                &nbsp;
+                                <button class="btn btn-info" (click)="findAllStaff()">
+                                    Find All
+                                </button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
          <br>
-          Address: <br>
-             <input type="text" size="25px"/>
-           <br>
-           Subject Handling: <br>
-              <input type="text" size="25px"/>
-            <br>
-           Salary: <br>
-               <input type="text" size="25px"/>
-             <br>
-            Class Taken: <br>
-                <input type="text" size="25px"/>
-              <br><br>
-              <button type="text">Find</button>&nbsp;
-              <button type="text">Update</button>&nbsp;
-              <button type="text">Delete</button>&nbsp;
-              <button type="text">Find All</button>&nbsp;
-              <button type="text">Insert</button>&nbsp;
-              
-       </div>  
+         <h3>{{result}}</h3>
+         <div style="width: 100%;" *ngIf="flag">
+          <table width="80%" align="center" class="table table-borderd">
+           <tr><th>Staff Id</th><th>Staff Name</th><th>Staff Salary</th></tr>
+            <tr *ngFor="let staf of stafArr">
+                <td> {{staf.id}} </td><td> {{staf.stafName}} </td><td> {{staf.stafSalary}} </td>
+            </tr>
+         </table>
+         </div>
+    </body>
+</html>

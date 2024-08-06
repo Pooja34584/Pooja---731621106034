@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { EmployeeService } from './employee.service';
-import { HttpClientModule } from '@angular/common/http';
-
+import { Employee } from './model/Employee';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,14 +15,14 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration(),
+    HttpClientModule,
     EmployeeService
+    
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
