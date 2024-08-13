@@ -8,10 +8,12 @@ class Student {
 	int sum;
 	float avg;
 	String grade;
+	//Constructor to initial
 	Student(int regNum, String stuName) {
 		this.regNum=regNum;
 		this.stuName=stuName;
 		}
+	//Method to get marks
 	void getmarks() {
 		Scanner s = new Scanner(System.in);
 		 for (int i = 0; i < marks.length; i++) {
@@ -19,6 +21,7 @@ System.out.println("Enter marks " + (i + 1) + ":");
  marks[i] = s.nextInt();	
 			}
 	}
+	//Method to calculate the sum
 	void calgrade() {
 		for(int i=0;i<5;i++) {
 			sum=sum+marks[i];
