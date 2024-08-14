@@ -5,5 +5,5 @@
  * @author home
  *
  */
-module pooja2 {
+module JavaLab {
 }
