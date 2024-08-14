@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author home
- *
- */
-module JavaLab {
-}
